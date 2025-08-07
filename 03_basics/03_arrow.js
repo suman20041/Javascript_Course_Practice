@@ -41,33 +41,37 @@ const user = {
 //function declaration help of arrow function
 // const chai = () => {
 //     let username = "suman"
-//     console.log(this.username);
+//     console.log(this.username);    ///This context work only object
 // }
 // chai()
 
 // const chai = () => {
 //     let username = "suman"
-//     console.log(this);
+//     console.log(this);      //execute empty object
 // }
 // chai()
 
 
 // return num1 and num2 in arrow function
-//implicit return
+//Explicit return
 // const addTwo = (num1,num2) => {
 //     return num1 + num2
 // }
 // console.log(addTwo(3,4));
 
-//Explicit return
+//Implicit return
 // const addTwo = (num1,num2) => num1 + num2
 // const addTwo = (num1,num2) => (num1+num2)
 
 //return object in arrow function
+// const addTwo = (num1,num2) => {username:"suman"}   //output undefined.. In this way we not able to return object.so we use paranthesis
 const addTwo = (num1,num2) => ({username:"suman"})
 
 console.log(addTwo(3,4));
 
-//arrow function useful in loop
+//arrow/classic function useful in loop
 // const myArray = [2, 3, 4, 5, 6]
 // myArray.forEach()
+// myArray.forEach(function ()  {})
+// myArray.forEach(() => {})
+// myArray.forEach(() => ())
