@@ -67,6 +67,7 @@ function addone(num){
 // function or expression
 // Declare a function and hold in variable
 //In this case we can't access the function before declaration
+//This is a hosting where create execution context
 addTwo(5)
 const addTwo = function(num){
     return num + 2
