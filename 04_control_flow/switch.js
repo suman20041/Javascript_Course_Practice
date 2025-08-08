@@ -9,7 +9,7 @@
 // }
 
 // const month = 3
-// switch (month) {
+// switch (month) {  //here we compare in keys
 //     case 1:
 //         console.log("january");
 //         break;
