@@ -27,6 +27,7 @@ if (Object.keys(emptyObj).length === 0) {
 let val1;
 // val1 = 5 ?? 10
 // val1 = null ?? 10 //null come the return value.function execute and add the value.
+//if value is present assign value.in case of value we add complex function and this function call datbase and value come from there.
 // val1 = undefined ?? 15
 val1 = null ?? 10 ?? 20
 console.log(val1);
