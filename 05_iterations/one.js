@@ -1,6 +1,6 @@
 //for:A for loop in JavaScript is a way to repeat some code multiple times.
 
-for (let i = 0; i <= 10; i++) {
+for (let i = 0; i <= 10; i++) {   //(initialization, condition check, increment& decrement)
     const element = i;
     if (element == 5) {
         // console.log("5 is best number");
