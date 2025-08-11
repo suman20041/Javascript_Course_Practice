@@ -14,6 +14,28 @@ for (const greet of greetings) {
 }
 
 
+// const greetingss = "Hello World!"
+// for (const greets of greetingss) {
+//     const element = greets
+//     if (element == " ") {
+//         console.log("Space don't print");
+//         continue;
+//     }
+//     console.log(`Each char is ${element}`);
+// }
+
+
+const greetingss = "Hello World!"
+for (const greets of greetingss) {
+    const element = greets
+    if (element == " ") {
+        // console.log("Space don't print");
+        break;
+    }
+    // console.log(`Each char is ${element}`);
+}
+
+
 
 //Maps
 const map = new Map()
@@ -24,7 +46,7 @@ map.set("IN", "India")
 
 // console.log(map);
 
-//for loop is not working on map because map is not iterable
+//for loop is  working on map because map is iterable
 for (const [key, value] of map) {
     // console.log(key, ":-", value);
 }
