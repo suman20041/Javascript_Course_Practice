@@ -78,3 +78,19 @@ form.addEventListener('submit', function(e){
 })
 
 ```
+
+
+## Project 3 Solution
+
+```javascript
+const clock = document.getElementById('clock');
+// const clock = document.querySelector('#clock')
+
+// The setInterval() method in JavaScript is used to repeatedly execute a function at a specified time interval (in milliseconds)
+setInterval(function(){
+  let date = new Date();
+  // console.log(date.toLocaleTimeString());
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
+
+```
