@@ -25,7 +25,7 @@
     //setTimeout(changeText, 2000)
 
     const changeMe =  setTimeout(changeText, 2000)
-    //clearTimeout(changeMe)
+    //clearTimeout(changeMe)  //cleartimeout need reference of the settimeout.. In queue those call back is present remove it
 
     //stop this event before happening
     document.querySelector('#stop').addEventListener('click', function(){
