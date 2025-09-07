@@ -23,23 +23,21 @@
     //const intervalId = setInterval(sayDate, 1000, "hi")
     //clearInterval(intervalId) // clearInterval need refence of the setInterval
 
-    const sayDate = function(str){
-        console.log(str, Date.now())
-    } 
-
 
     document.querySelector('#start').addEventListener('click', function(){
-        const start = function (){
-            console.log("Suman", Date.now());
-            console.log("STARTED");
-        }
-    })
+        console.log("STARTED");
+        const start = function(){
+            console.log("Suman", Date.now())
+        };
 
-    const stop = setInterval(start, 1000, (click = start));
+        const stop = setInterval(start, 1000, (click = start));
     
-    document.querySelector('#stop').addEventListener('click', function(){
-        clearInterval(stop);
-        console.log("STOPPED");
-    })
+        document.querySelector('#stop').addEventListener('click', function(){
+            console.log("STOPPED");
+            clearInterval(stop);
+        });
+    });
+
+    
 </script>
 </html>
