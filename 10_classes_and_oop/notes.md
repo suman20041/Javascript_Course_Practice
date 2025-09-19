@@ -11,7 +11,7 @@
 - good features we able to use like services
 
 ## parts of OOP
-Object literal {}
+Object literal {} - It means literally we create one object
 
 - Constructor function
 - Prototypes
@@ -21,6 +21,6 @@ Object literal {}
 
 ## 4 pillars
 Abstraction - Hide internal details(ex- fetch)
-Encapsulation
+Encapsulation - add one wrapper
 Inheritance
-Ploymorphism
+Ploymorphism - many form
