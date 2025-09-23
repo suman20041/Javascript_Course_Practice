@@ -18,3 +18,43 @@ let heroPower = {
         console.log(`Spidy power is ${this.spiderman}`)
     }
 }
+
+Object.prototype.suman = function(){
+    console.log(`suman is present is all objects`)
+}
+
+Array.prototype.heySuman = function(){
+    console.log(`Suman says hello`);
+}
+
+// heroPower.suman()
+myHeros.suman()
+myHeros.heySuman()
+// heroPower.heySuman()
+
+
+//inheritance
+
+const User = {
+    name: "Suman",
+    email: "suman@google.com"
+}
+
+const Teacher = {
+    makeVideo:true
+}
+
+const TeachingSupport = {
+    isAvailable:false
+}
+
+const TASupport = {
+    makeAssignment: "JS assignment",
+    fullTime:true,
+    __proto__:TeachingSupport
+}
+
+Teacher.__proto__ = User
+
+//modern syntax
+Object.prototype(TeachingSupport, Teacher)
