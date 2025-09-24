@@ -28,9 +28,9 @@ Array.prototype.heySuman = function(){
 }
 
 // heroPower.suman()
-myHeros.suman()
-myHeros.heySuman()
-// heroPower.heySuman()
+// myHeros.suman()
+// myHeros.heySuman()
+// heroPower.heySuman()  //output:error
 
 
 //inheritance
@@ -57,4 +57,16 @@ const TASupport = {
 Teacher.__proto__ = User
 
 //modern syntax
-Object.prototype(TeachingSupport, Teacher)
+Object.setPrototypeOf(TeachingSupport, Teacher)
+
+
+let anotherUsername = "sumanpanda      "
+
+String.prototype.trueLength = function(){
+    console.log(`${this}`)
+    console.log(`This length is: ${this.trim().length}`)
+}
+
+anotherUsername.trueLength()
+"chocolate".trueLength()
+"iceCream".trueLength()
