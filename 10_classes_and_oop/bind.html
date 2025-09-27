@@ -6,7 +6,7 @@
     <title>React</title>
 </head>
 <body>
-    </button onClick = {() => handleClick()}>Button Clicked</button>
+    <button>Button Clicked</button>
 </body>
 <script>
 class React{
@@ -14,18 +14,21 @@ class React{
         this.library = "React"
         this.server = "https://localhost:300"
 
-        //requirement - when page load create one react object
+        //requirement - when page load create one react object then give the reference of the above button and one method which is handleClick then this method give me some message like form submit or button clicked
+
+        //manual code write to create virtual dom and take the reference whatever element is present in page
         document
             .querySelector('button')
-            .addEventListener('click', this.handleClick)
+            .addEventListener('click', this.handleClick.bind(this))
     }
 
     handleClick(){
         console.log("button clicked");
         console.log(this);
+        console.log(this.server)
     }   
 }
 
-const app = new React()
+const app = new React()  // when we use new keyword then constructor give the reference of all the thing like button and method
 </script>
 </html>
