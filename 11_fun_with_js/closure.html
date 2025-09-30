@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    //Lexical scoping
+    //function init() {
+    //    let name = "Mozilla";
+    //    function displayName() {
+    //        console.log(name);
+    //    }
+    //    displayName();
+    //}
+    //init();
+
+    //function outer() {
+    //    let username = "suman"
+    //    console.log("OUTER", secret); //error
+    //    function inner() {
+    //        let secret = "my123"
+    //        console.log("inner", username);
+    //    }
+    //    function innerTwo(){
+    //        console.log("innerTwo", username);
+    //        console.log(secret);  //error
+    //    }
+    //    inner();
+    //    innerTwo();
+    //}
+    //outer();
+    //console.log("TOO OUTER", username); //error
+
+
+
+    //Closure
+
+    //function makeFunc() {
+    //    const name = "Mozilla";
+    //    function displayName() {
+    //        console.log(name);
+    //    }
+    //    //sirf displayname nahi jayega uska outer function bhi exist karta hai uska bhi pura scope jayega
+    //    return displayName; // function reference pass a return
+    //    //function ka scope tab tak raheta hai jab tak who execute hota hai
+    //    // when we return entire function, not only fuction return the whole lexical scope is return
+    //}
+
+    //const myFunc = makeFunc();
+    //myFunc();
+    
+</script>
+
+<script>
+    //Real time scenario how clousure work
+    
+    //document.getElementById("orange").onclick = function(){
+    //    document.body.style.backgroundColor = `orange`
+    //}
+    //document.getElementById("green").onclick = function(){
+    //    document.body.style.backgroundColor = `green`
+    //}
+
+    //Write code generic, in this code we deside which button i want to click
+    function clickHandler(color){
+        //document.body.style.backgroundColor = `${color}`
+
+        // above color access in below function because of closure.. color ka access hai tho argument mai green or orange dena sai kam ho raha hai
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    document.getElementById("orange").onclick = clickHandler("orange")
+    document.getElementById("green").onclick = clickHandler("green")
+
+</script>
+
+</html>
